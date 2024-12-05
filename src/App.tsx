@@ -8,6 +8,9 @@ import { About } from './components/About/About';
 import { Contact } from './components/Contact/Contact';
 import { Toaster } from 'react-hot-toast';
 import { Resources } from './components/Resources/Resources';
+import { WindPower } from './components/Solutions/WindPower';
+import { SolarEnergy } from './components/Solutions/SolarEnergy';
+import { Hydroelectric } from './components/Solutions/Hydroelectric';
 
 function App() {
   const { isDarkMode } = useThemeStore();
@@ -24,6 +27,9 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/solutions/wind" element={<WindPower />} />
+            <Route path="/solutions/solar" element={<SolarEnergy />} />
+            <Route path="/solutions/hydro" element={<Hydroelectric />} />
           </Routes>
         </div>
       </div>
