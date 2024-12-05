@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Leaf } from 'lucide-react';
 import { useThemeStore } from '../../store/themeStore';
 import ThemeToggle from '../ThemeToggle';
+import { ShareMenu } from './ShareMenu';
 
 const navItems = [
   {
@@ -107,11 +108,15 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <ThemeToggle />
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              <ShareMenu />
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center space-x-2">
+            <ShareMenu />
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
