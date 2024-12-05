@@ -32,6 +32,36 @@ const Home = () => {
     <div className="relative">
       <ParallaxHero />
 
+      <section className="relative mt-8 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-xl overflow-hidden shadow-2xl border-2 border-green-500/20 
+              bg-white dark:bg-gray-800 backdrop-blur-sm 
+              hover:border-green-500/40 transition-all duration-300"
+            style={{ height: '800px' }}
+          >
+            <div className="w-full bg-gradient-to-r from-green-500/10 to-blue-500/10 dark:from-green-500/5 dark:to-blue-500/5 p-4 border-b border-green-500/20">
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+            </div>
+            <iframe
+              src="https://famous-bunny-47bdd0.netlify.app/"
+              title="Reference Website"
+              className="w-full h-[calc(100%-48px)] border-0"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              sandbox="allow-scripts allow-same-origin allow-popups"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
