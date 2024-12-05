@@ -13,6 +13,7 @@
     "@headlessui/react": "^1.7.18",
     "@react-three/drei": "^9.119.0",
     "@react-three/fiber": "^8.17.10",
+    "@vercel/analytics": "^1.4.1",
     "chart.js": "^4.4.7",
     "framer-motion": "^11.13.1",
     "gsap": "^3.12.5",

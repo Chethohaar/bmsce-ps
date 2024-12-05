@@ -11,6 +11,7 @@ import { Resources } from './components/Resources/Resources';
 import { WindPower } from './components/Solutions/WindPower';
 import { SolarEnergy } from './components/Solutions/SolarEnergy';
 import { Hydroelectric } from './components/Solutions/Hydroelectric';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const { isDarkMode } = useThemeStore();
@@ -32,6 +33,7 @@ function App() {
             <Route path="/solutions/hydro" element={<Hydroelectric />} />
           </Routes>
         </div>
+        <Analytics />
       </div>
     </Router>
   );
