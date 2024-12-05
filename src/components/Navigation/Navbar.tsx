@@ -23,7 +23,7 @@ const navItems = [
     href: '/resources',
   },
   {
-    label: 'Calculator',
+    label: 'CFC',
     href: '/calculator',
   },
   {
