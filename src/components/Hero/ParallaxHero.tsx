@@ -4,10 +4,12 @@ import HeroBackground from './HeroBackground';
 import { useScroll } from 'framer-motion';
 import TextReveal from './TextReveal';
 import { useThemeStore } from '../../store/themeStore';
+import { useNavigate } from 'react-router-dom';
 
 const ParallaxHero = () => {
   const { scrollYProgress } = useScroll();
   const { isDarkMode } = useThemeStore();
+  const navigate = useNavigate();
 
   return (
     <section className={`relative min-h-screen flex items-center ${
@@ -30,7 +32,7 @@ const ParallaxHero = () => {
             <h1 className={`text-6xl md:text-8xl font-bold mb-6 ${
               isDarkMode 
                 ? 'bg-clip-text text-transparent bg-gradient-to-r from-green-300 via-green-400 to-green-500' 
-                : 'text-gray-900'
+                : 'bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-teal-500 to-green-600'
             }`}>
               Powering a
               <br />
@@ -52,6 +54,7 @@ const ParallaxHero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate('/resources')}
             className="relative px-8 py-4 bg-green-500 rounded-full text-lg font-semibold overflow-hidden group text-white"
           >
             <span className="relative z-10">Get Started</span>
