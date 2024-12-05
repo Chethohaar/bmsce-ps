@@ -10,16 +10,16 @@ const Home = () => {
       <ParallaxHero />
       
       {/* Embedded Website Section */}
-      <section className="relative py-20 bg-white dark:bg-gray-900">
+      <section className="relative py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative w-full h-[800px] rounded-lg overflow-hidden shadow-2xl">
+          <div className="relative w-full h-[800px] rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-green-50 via-blue-50 to-gray-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800 p-1">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10 dark:from-green-500/5 dark:to-blue-500/5" />
             <iframe
               src="https://famous-bunny-47bdd0.netlify.app/"
               title="Interactive Energy Visualization"
-              className="w-full h-full border-0"
+              className="w-full h-full rounded-lg border-0 relative z-10 bg-white dark:bg-gray-900"
               style={{ 
-                borderRadius: '0.5rem',
-                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
               }}
               loading="lazy"
               allowFullScreen
