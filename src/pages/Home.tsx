@@ -2,13 +2,31 @@ import React from 'react';
 import ParallaxHero from '../components/Hero/ParallaxHero';
 import { motion } from 'framer-motion';
 import { Wind, Sun, Droplets } from 'lucide-react';
-import { Globe } from '../components/Globe/Globe';
+
 
 const Home = () => {
   return (
-    <>
+    <div className="relative">
       <ParallaxHero />
-      <Globe />
+      
+      {/* Embedded Website Section */}
+      <section className="relative py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative w-full h-[800px] rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              src="https://famous-bunny-47bdd0.netlify.app/"
+              title="Interactive Energy Visualization"
+              className="w-full h-full border-0"
+              style={{ 
+                borderRadius: '0.5rem',
+                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+              }}
+              loading="lazy"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +85,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
